@@ -1,7 +1,7 @@
 package org.chinaarchitect.testproject.formula;
 
 public class Function implements Expressible {
-	private Expressible[] expressions;
+	protected Expressible[] expressions;
 
 	public Function(Expressible[] expressions) {
 		this.setExpressions(expressions);
@@ -12,7 +12,7 @@ public class Function implements Expressible {
 		// TODO Auto-generated method stub
 		return expressions[0].getValue();
 	}
-
+	@Override
 	public String toString() {
 		if (expressions != null) {
 			String str = "(" + expressions[0].toString();

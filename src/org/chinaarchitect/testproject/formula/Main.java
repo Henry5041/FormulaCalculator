@@ -9,11 +9,14 @@ public class Main {
 		Scanner in = new Scanner(System.in);
 
 		Expressible[] exp = new Expressible[5];
+		
 		for (int i = 0; i < 5 ; i++){
-			Constant c = new Constant(in.nextInt());
+			Constant c = new Constant(in.nextDouble());
 			exp[i] = c;
 		}
 		System.out.println(new Function(exp));
+		System.out.println(new Addition(exp));
+		System.out.println(new Addition(exp).getValue());
 		in.close();
 	}
 
