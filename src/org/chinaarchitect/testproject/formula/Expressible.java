@@ -2,7 +2,7 @@ package org.chinaarchitect.testproject.formula;
 
 public interface Expressible {
 
-	public double getValue();
+	public double getValue(); // An expression must have a value
 
-	public String toString();
+	public String toString(); // An expression can be expressed with a String
 }

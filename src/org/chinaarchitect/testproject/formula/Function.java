@@ -12,6 +12,7 @@ public class Function implements Expressible {
 		// TODO Auto-generated method stub
 		return expressions[0].getValue();
 	}
+
 	@Override
 	public String toString() {
 		if (expressions != null) {

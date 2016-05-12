@@ -13,6 +13,10 @@ public class Constant implements Expressible {
 		return value;
 	}
 
+	public void setValue(double value) {
+		this.value = value;
+	}
+
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
