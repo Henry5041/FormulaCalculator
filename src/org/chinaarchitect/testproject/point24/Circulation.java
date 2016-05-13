@@ -22,15 +22,15 @@ public class Circulation {
 	public <T extends Code> void circulate(T code) {
 
 		for (; time[depth] < loop[depth]; time[depth]++) {
-			depth++;
-			if (depth < loop.length) {
+			depth++; // Depth added one for entering a new inner loop
+			if (depth < loop.length) { // Detects if it's the deepest depth
 
 				circulate(code);
 				time[depth] = 0;
 			} else {
 				code.body(time);
 			}
-			depth--;
+			depth--; // Depth minus one for quitting a inner loop
 
 		}
 
