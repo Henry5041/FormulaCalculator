@@ -2,24 +2,24 @@ package org.chinaarchitect.testproject.point24;
 
 import java.util.HashSet;
 
-public class Pattern {
-	private Object[] pattern;
+public class Pattern<T> {
+	private T[] pattern;
 
-	public Pattern(Object[] pattern) {
+	public Pattern(T[] pattern) {
 		setPattern(pattern);
 	}
 
-	public Object[] getPattern() {
+	public T[] getPattern() {
 		return pattern;
 	}
 
-	public void setPattern(Object[] pattern) {
+	public void setPattern(T[] pattern) {
 		this.pattern = pattern;
 	}
 
 	public String toString() {
 		String output = "";
-		for (Object element : pattern) {
+		for (T element : pattern) {
 			if (output == "")
 				output = element.toString();
 			else
@@ -28,9 +28,10 @@ public class Pattern {
 		return output;
 	}
 
-	public HashSet<Object[]> Iterate() {
-		HashSet<Object[]> patterns = new HashSet<Object[]>();
+	public HashSet<T[]> Iterate() {
+		HashSet<T[]> patterns = new HashSet<T[]>();
 		// TODO finish this part
 		return patterns;
 	}
+
 }
