@@ -1,4 +1,4 @@
-package org.chinaarchitect.testproject.point24;
+package org.chinaarchitect.testproject.pattern;
 
 public class Circulation {
 	private int[] loop;

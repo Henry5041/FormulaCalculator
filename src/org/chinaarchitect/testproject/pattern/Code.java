@@ -1,4 +1,4 @@
-package org.chinaarchitect.testproject.point24;
+package org.chinaarchitect.testproject.pattern;
 
 public interface Code {
 	public void body(int[] time);
