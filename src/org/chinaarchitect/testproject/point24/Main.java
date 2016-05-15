@@ -3,30 +3,32 @@ package org.chinaarchitect.testproject.point24;
 import java.util.HashSet;
 import java.util.Scanner;
 
+import org.chinaarchitect.testproject.pattern.Pattern;
+
 public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Scanner in = new Scanner(System.in);
-		int[] num = new int[4];
+		Integer[] num = new Integer[4];
 		do {
 			System.out.println("Please enter the correct 4 numbers:");
-			for (int i = 0; i < num.length; i++) {
+			for (Integer i = 0; i < num.length; i++) {
 				num[i] = in.nextInt();
 
 			}
 		} while (!judge(num)); // Judge if the numbers are in the correct range.
 		in.close();
-		for (int[] pattern : patternIterator(num)) {
+		for (Integer[] pattern : patternIterator(num)) {
 			System.out.println(getFormula(pattern));
 		}
 
 	}
 
-	public static boolean judge(int[] num) {
+	public static boolean judge(Integer[] num) {
 		if (num != null) {
 
-			for (int i = 0; i < num.length; i++) {
+			for (Integer i = 0; i < num.length; i++) {
 
 				if (num[i] < 1 || num[i] > 13) // Make sure they're acceptable
 												// numbers
@@ -39,38 +41,17 @@ public class Main {
 
 	}
 
-	public static HashSet<int[]> patternIterator(int[] num) {
-		HashSet<int[]> patterns = new HashSet<int[]>();
+	public static HashSet<Integer[]> patternIterator(Integer[] num) {
 		// Iterate every possible patterns with the same 4 numbers
-		for (int i = 0; i < 4; i++) {
-			for (int j = 0; j < 4; j++) {
-				for (int k = 0; k < 4; k++) {
-					for (int l = 0; l < 4; l++) {
-						if (i != j && i != k && i != l && j != k && j != l && k != l) { // Make
-																						// sure
-																						// no
-																						// two
-																						// elements
-																						// are
-																						// the
-																						// same
-							int[] pattern = { num[i], num[j], num[k], num[l] };
-							patterns.add(pattern);
-
-						}
-					}
-				}
-			}
-		}
-
-		return patterns;
+		Pattern<Integer> pat = new Pattern<Integer>(num);
+		return pat.Iterate();
 	}
 
-	public static String getFormula(int[] pattern) {
+	public static String getFormula(Integer[] pattern) {
 		String result = "";
-		for (int i = 0; i < 6; i++) {
-			for (int j = 0; j < 6; j++) {
-				for (int k = 0; k < 6; k++) {
+		for (Integer i = 0; i < 6; i++) {
+			for (Integer j = 0; j < 6; j++) {
+				for (Integer k = 0; k < 6; k++) {
 					double successiveResult = calculator(
 							calculator(calculator(pattern[0], pattern[1], i), pattern[2], j), pattern[3], k);
 					if (successiveResult > 23.99999 && successiveResult < 24.00001) { // Reduce
@@ -98,7 +79,7 @@ public class Main {
 	}
 
 	// TODO Write way of group calculation
-	public static double calculator(double firstNum, double secondNum, int operationCase) {
+	public static double calculator(double firstNum, double secondNum, Integer operationCase) {
 		double finalNum = firstNum; // Initialize the finalNum
 		switch (operationCase) {
 		case 0:
@@ -133,7 +114,7 @@ public class Main {
 	}
 
 	// TODO Write way of group calculation
-	public static String formulaWriter(String firstFormula, String secondFormula, int operationCase) {
+	public static String formulaWriter(String firstFormula, String secondFormula, Integer operationCase) {
 		String result = "";
 		switch (operationCase) {
 		case 0:
@@ -163,11 +144,11 @@ public class Main {
 	}
 
 	// method of testing
-	public static void output(int[] array) {
+	public static void output(Integer[] array) {
 
 		if (array != null) {
 
-			for (int i = 0; i < array.length; i++) {
+			for (Integer i = 0; i < array.length; i++) {
 
 				System.out.print(array[i] + " ");
 
