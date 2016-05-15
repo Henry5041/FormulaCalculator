@@ -1,4 +1,4 @@
-package org.chinaarchitect.testproject.pattern;
+package org.chinaarchitect.calculator.pattern;
 
 import java.util.HashSet;
 

@@ -2,7 +2,7 @@ package org.chinaarchitect.testproject.test;
 
 import java.util.HashSet;
 
-import org.chinaarchitect.testproject.pattern.Pattern;
+import org.chinaarchitect.calculator.pattern.Pattern;
 
 public class Main {
 

@@ -1,9 +1,9 @@
-package org.chinaarchitect.testproject.point24;
+package org.chinaarchitect.calculator.point24;
 
 import java.util.HashSet;
 import java.util.Scanner;
 
-import org.chinaarchitect.testproject.pattern.Pattern;
+import org.chinaarchitect.calculator.pattern.Pattern;
 
 public class Main {
 

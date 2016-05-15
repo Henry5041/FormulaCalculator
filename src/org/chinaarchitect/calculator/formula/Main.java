@@ -1,4 +1,4 @@
-package org.chinaarchitect.testproject.formula;
+package org.chinaarchitect.calculator.formula;
 
 import java.util.Scanner;
 
