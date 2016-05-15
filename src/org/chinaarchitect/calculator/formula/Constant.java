@@ -1,4 +1,4 @@
-package org.chinaarchitect.testproject.formula;
+package org.chinaarchitect.calculator.formula;
 
 public class Constant implements Expressible {
 	private double value;
