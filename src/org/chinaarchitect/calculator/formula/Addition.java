@@ -7,6 +7,14 @@ public class Addition extends Function {
 		// TODO Auto-generated constructor stub
 	}
 
+	public Addition(double[] array) {
+		super(array);
+	}
+
+	public Addition(Expressible addend1, Expressible addend2) {
+		super(new Expressible[] { addend1, addend2 });
+	}
+
 	@Override
 	public double getValue() {
 		if (expressions != null) {
@@ -41,5 +49,15 @@ public class Addition extends Function {
 
 		return "";
 
+	}
+
+	@Override
+	public Expressible plus(Expressible addend) {
+		Expressible[] sum = new Expressible[expressions.length + 1];
+		for (int i = 0; i < expressions.length; i++) {
+			sum[i] = expressions[i];
+		}
+		sum[expressions.length + 1] = addend;
+		return new Addition(sum);
 	}
 }

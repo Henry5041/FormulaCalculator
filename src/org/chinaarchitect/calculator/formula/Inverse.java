@@ -14,7 +14,12 @@ public class Inverse extends Function {
 
 	@Override
 	public String toString() {
-		return "-(" + expressions[0] + ")";
+		if (expressions[0].toString().startsWith("-") || expressions[0] instanceof Addition
+				|| expressions[0] instanceof Subtraction) {
+			return "-(" + expressions[0] + ")";
+		} else
+			return "-" + expressions[0];
+
 	}
 
 }
