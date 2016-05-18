@@ -2,12 +2,7 @@ package org.chinaarchitect.testproject.test;
 
 import java.util.Scanner;
 
-import org.chinaarchitect.calculator.formula.Addition;
-import org.chinaarchitect.calculator.formula.Division;
-import org.chinaarchitect.calculator.formula.Expressible;
-import org.chinaarchitect.calculator.formula.Inverse;
-import org.chinaarchitect.calculator.formula.Multiplication;
-import org.chinaarchitect.calculator.formula.Subtraction;
+import org.chinaarchitect.calculator.formula.*;
 
 public class Main {
 
@@ -41,13 +36,13 @@ public class Main {
 		System.out.print("w=");
 		double w = in.nextDouble();
 
-		Expressible f = new Multiplication(new Addition(new double[] { a, b, c }),
+		Calculable f = new Multiplication(new Addition(new double[] { a, b, c }),
 				new Subtraction(new double[] { x, y, z }));
 		System.out.println("f=" + f);
 		System.out.println(f.getValue());
 		System.out.println(new Inverse(f).getValue());
 
-		Expressible g = new Division(new Addition(new double[] { d, c, b }), new Subtraction(new double[] { w, z, y }));
+		Calculable g = new Division(new Addition(new double[] { d, c, b }), new Subtraction(new double[] { w, z, y }));
 		System.out.println("g=" + g);
 		System.out.println(g.getValue());
 		System.out.println(new Inverse(g).getValue());

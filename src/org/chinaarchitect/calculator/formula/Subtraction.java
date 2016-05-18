@@ -2,7 +2,7 @@ package org.chinaarchitect.calculator.formula;
 
 public class Subtraction extends Function {
 
-	public Subtraction(Expressible[] expressions) {
+	public Subtraction(Calculable[] expressions) {
 		super(expressions);
 		// TODO Auto-generated constructor stub
 	}
@@ -11,8 +11,8 @@ public class Subtraction extends Function {
 		super(array);
 	}
 
-	public Subtraction(Expressible minuend, Expressible subtractor) {
-		super(new Expressible[] { minuend, subtractor });
+	public Subtraction(Calculable minuend, Calculable subtractor) {
+		super(new Calculable[] { minuend, subtractor });
 	}
 
 	@Override
@@ -52,12 +52,12 @@ public class Subtraction extends Function {
 	}
 
 	@Override
-	public Expressible minus(Expressible subtractor) {
-		Expressible[] difference = new Expressible[expressions.length + 1];
+	public Calculable minus(Calculable subtractor) {
+		Calculable[] difference = new Calculable[expressions.length + 1];
 		for (int i = 0; i < expressions.length; i++) {
 			difference[i] = expressions[i];
 		}
 		difference[expressions.length + 1] = subtractor;
-		return new Addition(difference);
+		return new Subtraction(difference);
 	}
 }

@@ -1,7 +1,7 @@
 package org.chinaarchitect.calculator.formula;
 
-public class Constant implements Expressible {
-	private double value;
+public class Constant implements Calculable {
+	private final double value;
 
 	public Constant(double value) {
 		this.value = value;
@@ -10,10 +10,6 @@ public class Constant implements Expressible {
 	public double getValue() {
 		// TODO Auto-generated method stub
 		return value;
-	}
-
-	public void setValue(double value) {
-		this.value = value;
 	}
 
 	@Override
@@ -33,35 +29,35 @@ public class Constant implements Expressible {
 	}
 
 	// Four Operations
-	public Expressible plus(Expressible addend) {
+	public Calculable plus(Calculable addend) {
 		return new Addition(this, addend);
 	}
 
-	public Expressible plus(double addend) {
+	public Calculable plus(double addend) {
 		return new Addition(this, new Constant(addend));
 	}
 
-	public Expressible minus(Expressible subtractor) {
+	public Calculable minus(Calculable subtractor) {
 		return new Subtraction(this, subtractor);
 	}
 
-	public Expressible minus(double subtractor) {
+	public Calculable minus(double subtractor) {
 		return new Subtraction(this, new Constant(subtractor));
 	}
 
-	public Expressible multiply(Expressible multiplier) {
+	public Calculable multiply(Calculable multiplier) {
 		return new Multiplication(this, multiplier);
 	}
 
-	public Expressible multiply(double multiplier) {
+	public Calculable multiply(double multiplier) {
 		return new Multiplication(this, new Constant(multiplier));
 	}
 
-	public Expressible divide(Expressible divisor) {
+	public Calculable divide(Calculable divisor) {
 		return new Division(this, divisor);
 	}
 
-	public Expressible divide(double divisor) {
+	public Calculable divide(double divisor) {
 		return new Division(this, new Constant(divisor));
 	}
 }

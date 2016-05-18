@@ -1,49 +1,48 @@
 package org.chinaarchitect.calculator.formula;
 
-public class Function implements Calculable {
-	protected Calculable[] expressions;
+public class Variable implements Calculable {
+	private double value;
+	private String name;
 
-	public Function(Calculable[] expressions) {
-		this.setExpressions(expressions);
+	public Variable(String name, double value) {
+		// TODO Auto-generated constructor stub
+		this.setValue(value);
+		this.setName(name);
+
 	}
 
-	public Function(double[] array) {
-		Calculable[] exps = new Calculable[array.length];
-		for (int i = 0; i < array.length; i++) {
-			exps[i] = new Constant(array[i]);
-		}
-		this.setExpressions(exps);
-	}
-
+	@Override
 	public double getValue() {
 		// TODO Auto-generated method stub
-		return expressions[0].getValue();
+		return value;
+	}
+
+	public void setValue(double value) {
+		this.value = value;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	@Override
 	public String toString() {
-		if (expressions != null) {
-			String str = "(" + expressions[0].toString();
+		// TODO Auto-generated method stub
+		return name;
+	}
 
-			for (int i = 1; i < expressions.length; i++) {
-
-				str = str + "," + expressions[i];
-
+	@Override
+	public boolean equals(Object o) {
+		if (o instanceof Constant) {
+			if (((Constant) o).getValue() == value) {
+				return true;
 			}
-			str = str + ")";
-			return str;
 		}
-
-		return "";
-
-	}
-
-	public Calculable[] getExpressions() {
-		return expressions;
-	}
-
-	public void setExpressions(Calculable[] expressions) {
-		this.expressions = expressions;
+		return false;
 	}
 
 	// Four Operations
@@ -78,4 +77,5 @@ public class Function implements Calculable {
 	public Calculable divide(double divisor) {
 		return new Division(this, new Constant(divisor));
 	}
+
 }

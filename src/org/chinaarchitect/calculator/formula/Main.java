@@ -8,7 +8,7 @@ public class Main {
 		// TODO Auto-generated method stub
 		Scanner in = new Scanner(System.in);
 
-		Expressible[] exp = new Expressible[5];
+		Calculable[] exp = new Calculable[5];
 
 		for (int i = 0; i < 5; i++) {
 			Constant c = new Constant(in.nextDouble());

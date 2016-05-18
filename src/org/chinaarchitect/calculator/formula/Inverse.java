@@ -2,8 +2,8 @@ package org.chinaarchitect.calculator.formula;
 
 public class Inverse extends Function {
 
-	public Inverse(Expressible exp) {
-		super(new Expressible[] { exp });
+	public Inverse(Calculable exp) {
+		super(new Calculable[] { exp });
 		// TODO Auto-generated constructor stub
 	}
 

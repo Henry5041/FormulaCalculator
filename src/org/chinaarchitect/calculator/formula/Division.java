@@ -2,7 +2,7 @@ package org.chinaarchitect.calculator.formula;
 
 public class Division extends Function {
 
-	public Division(Expressible[] expressions) {
+	public Division(Calculable[] expressions) {
 		super(expressions);
 		// TODO Auto-generated constructor stub
 	}
@@ -11,8 +11,8 @@ public class Division extends Function {
 		super(array);
 	}
 
-	public Division(Expressible dividend, Expressible divisor) {
-		super(new Expressible[] { dividend, divisor });
+	public Division(Calculable dividend, Calculable divisor) {
+		super(new Calculable[] { dividend, divisor });
 	}
 
 	@Override
@@ -58,4 +58,15 @@ public class Division extends Function {
 
 	}
 
+	@Override
+	public Calculable divide(Calculable divisor) {
+		Calculable[] quotient = new Calculable[expressions.length + 1];
+		for (int i = 0; i < expressions.length; i++) {
+			// Copy the expressions in the front
+			quotient[i] = expressions[i];
+		}
+		// Add the input to the last place
+		quotient[expressions.length + 1] = divisor;
+		return new Division(quotient);
+	}
 }

@@ -2,7 +2,7 @@ package org.chinaarchitect.calculator.formula;
 
 public class Multiplication extends Function {
 
-	public Multiplication(Expressible[] expressions) {
+	public Multiplication(Calculable[] expressions) {
 		super(expressions);
 		// TODO Auto-generated constructor stub
 	}
@@ -11,8 +11,8 @@ public class Multiplication extends Function {
 		super(array);
 	}
 
-	public Multiplication(Expressible multiplier1, Expressible multiplier2) {
-		super(new Expressible[] { multiplier1, multiplier2 });
+	public Multiplication(Calculable multiplier1, Calculable multiplier2) {
+		super(new Calculable[] { multiplier1, multiplier2 });
 	}
 
 	@Override
@@ -57,5 +57,17 @@ public class Multiplication extends Function {
 
 		return "";
 
+	}
+
+	@Override
+	public Calculable multiply(Calculable multiplier) {
+		Calculable[] product = new Calculable[expressions.length + 1];
+		for (int i = 0; i < expressions.length; i++) {
+			// Copy the expressions in the front
+			product[i] = expressions[i];
+		}
+		// Add the input to the last place
+		product[expressions.length + 1] = multiplier;
+		return new Multiplication(product);
 	}
 }

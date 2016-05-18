@@ -2,8 +2,8 @@ package org.chinaarchitect.calculator.formula;
 
 public class Involution extends Function {
 
-	public Involution(Expressible base, Expressible index) {
-		super(new Expressible[] { base, index });
+	public Involution(Calculable base, Calculable index) {
+		super(new Calculable[] { base, index });
 		// TODO Auto-generated constructor stub
 	}
 
