@@ -1,21 +1,33 @@
 package org.chinaarchitect.testproject.test;
 
 import java.util.HashSet;
+import java.util.Scanner;
 
 import org.chinaarchitect.calculator.pattern.Pattern;
+import org.chinaarchitect.calculator.point24.PointMatcher;
 
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Integer[] c = { 1, 2, 3, 4 };
-		Pattern<Integer> pat = new Pattern<Integer>(c);
-		HashSet<Integer[]> patterns = pat.Iterate();
-		for (Integer[] eachGroup : patterns) {
-			System.out.println(new Pattern<Integer>(eachGroup).toString(","));
+		Scanner in = new Scanner(System.in);
+		Integer[] firstPattern = new Integer[4];
+		System.out.println("Please enter the correct 4 numbers:");
+		for (Integer i = 0; i < firstPattern.length; i++) {
+			firstPattern[i] = in.nextInt();
+		}
+		in.close();
+		HashSet<String> formulas = new HashSet<String>();
+		for (Integer[] pattern : new Pattern<Integer>(firstPattern).Iterate()) {
+			// System.out.println(getFormula(pattern));
+			PointMatcher matcher = new PointMatcher(pattern, 24);
+
+			formulas.addAll(matcher.getSuccessive());
+		}
+		for (String str : formulas) {
+			System.out.println(str);
+
 		}
 
-		System.out.println("End");
 	}
 
 }

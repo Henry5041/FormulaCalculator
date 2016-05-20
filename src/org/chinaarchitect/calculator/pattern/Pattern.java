@@ -59,7 +59,6 @@ public class Pattern<T> {
 			public void body(int[] time) {
 				T[] pat = pattern.clone(); // Create an array with the same
 											// length of pattern
-				// TODO Fix bug of empty set
 				boolean repeat = false;
 				Loop: for (int i = 0; i < time.length; i++) {
 					for (int j = i + 1; j < time.length; j++) {
