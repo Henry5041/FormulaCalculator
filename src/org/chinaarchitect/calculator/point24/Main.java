@@ -20,8 +20,17 @@ public class Main {
 		} while (!judge(num)); // Judge if the numbers are in the correct range.
 		in.close();
 		for (Integer[] pattern : patternIterator(num)) {
-			System.out.println(getFormula(pattern));
+			// System.out.println(getFormula(pattern));
+			output(pattern);
+			PointMatcher matcher = new PointMatcher(pattern, 24);
+
+			for (String eachFormula : matcher.getSuccessive()) {
+				System.out.println(eachFormula);
+
+			}
 		}
+
+		// TODO Fix this part
 
 	}
 

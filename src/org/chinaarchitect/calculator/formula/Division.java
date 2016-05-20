@@ -46,7 +46,7 @@ public class Division extends Function {
 
 			for (int i = 1; i < expressions.length; i++) {
 
-				if (expressions[i] instanceof Constant) {
+				if (expressions[i] instanceof Constant || expressions[i] instanceof Involution) {
 					str += "/" + expressions[i];
 				} else
 					str += "/(" + expressions[i] + ")";
@@ -66,7 +66,7 @@ public class Division extends Function {
 			quotient[i] = expressions[i];
 		}
 		// Add the input to the last place
-		quotient[expressions.length + 1] = divisor;
+		quotient[expressions.length] = divisor;
 		return new Division(quotient);
 	}
 }

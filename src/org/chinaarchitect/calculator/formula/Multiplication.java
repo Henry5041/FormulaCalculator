@@ -49,7 +49,7 @@ public class Multiplication extends Function {
 						|| expressions[i] instanceof Subtraction) {
 					str += "*(" + expressions[i] + ")";
 				} else
-					str += expressions[i];
+					str += "*" + expressions[i];
 
 			}
 			return str;
@@ -67,7 +67,7 @@ public class Multiplication extends Function {
 			product[i] = expressions[i];
 		}
 		// Add the input to the last place
-		product[expressions.length + 1] = multiplier;
+		product[expressions.length] = multiplier;
 		return new Multiplication(product);
 	}
 }

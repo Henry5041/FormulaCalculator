@@ -59,7 +59,7 @@ public class Addition extends Function {
 			sum[i] = expressions[i];
 		}
 		// Add the input to the last place
-		sum[expressions.length + 1] = addend;
+		sum[expressions.length] = addend;
 		return new Addition(sum);
 	}
 }

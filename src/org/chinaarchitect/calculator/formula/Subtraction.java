@@ -57,7 +57,7 @@ public class Subtraction extends Function {
 		for (int i = 0; i < expressions.length; i++) {
 			difference[i] = expressions[i];
 		}
-		difference[expressions.length + 1] = subtractor;
+		difference[expressions.length] = subtractor;
 		return new Subtraction(difference);
 	}
 }
