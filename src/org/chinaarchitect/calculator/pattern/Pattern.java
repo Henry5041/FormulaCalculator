@@ -21,7 +21,7 @@ public class Pattern<T> {
 	public String toString() {
 		String output = "";
 		for (T element : pattern) {
-			if (output == "")
+			if (output == "") // Judge if the element is the first one
 				output = element.toString();
 			else
 				output += "\n" + element.toString();
@@ -35,7 +35,8 @@ public class Pattern<T> {
 			if (output == "")
 				output = element.toString();
 			else
-				output += separator + element.toString();
+				output += separator + element.toString(); // Output with the
+															// given separator
 		}
 		return output;
 	}
@@ -44,10 +45,11 @@ public class Pattern<T> {
 		// TODO finish this part
 		HashSet<T[]> patterns = new HashSet<T[]>();
 		int[] loop = new int[pattern.length];
-		// Make all elements in array time equal to pattern's length
 		if (loop != null) {
 
-			for (int i = 0; i < loop.length; i++) {
+			for (int i = 0; i < loop.length; i++) { // Make all elements in
+													// array time equal to
+													// pattern's length
 
 				loop[i] = pattern.length;
 
@@ -60,6 +62,8 @@ public class Pattern<T> {
 				T[] pat = pattern.clone(); // Create an array with the same
 											// length of pattern
 				boolean repeat = false;
+				
+				// Judge if any two elements in the time array are the same
 				Loop: for (int i = 0; i < time.length; i++) {
 					for (int j = i + 1; j < time.length; j++) {
 						if (time[i] == time[j]) {

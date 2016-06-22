@@ -6,18 +6,15 @@ import org.chinaarchitect.calculator.formula.Calculable;
 import org.chinaarchitect.calculator.formula.Constant;
 import org.chinaarchitect.calculator.pattern.Circulation;
 import org.chinaarchitect.calculator.pattern.Code;
-import org.chinaarchitect.calculator.pattern.Pattern;
 
 public class PointMatcher {
 	public Integer[] array;
 	Integer target;
-	HashSet<Integer[]> patterns;
 
 	public PointMatcher(Integer[] array, Integer target) {
 		this.array = array;
 		this.target = target;
-		Pattern<Integer> pattern = new Pattern<Integer>(array);
-		patterns = pattern.Iterate();
+
 	}
 
 	public HashSet<String> getSuccessive() {
