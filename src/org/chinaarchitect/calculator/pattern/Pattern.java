@@ -62,7 +62,7 @@ public class Pattern<T> {
 				T[] pat = pattern.clone(); // Create an array with the same
 											// length of pattern
 				boolean repeat = false;
-				
+
 				// Judge if any two elements in the time array are the same
 				Loop: for (int i = 0; i < time.length; i++) {
 					for (int j = i + 1; j < time.length; j++) {

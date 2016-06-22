@@ -1,5 +1,9 @@
 package org.chinaarchitect.calculator.formula;
-
+/**
+ * 
+ * @author Henry Hu
+ *
+ */
 public class Involution extends Function {
 
 	public Involution(Calculable base, Calculable index) {

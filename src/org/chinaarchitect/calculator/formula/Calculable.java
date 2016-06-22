@@ -1,5 +1,9 @@
 package org.chinaarchitect.calculator.formula;
-
+/**
+ * 
+ * @author Henry Hu
+ *
+ */
 public interface Calculable extends Expressible {
 
 	public Calculable plus(Calculable addend);

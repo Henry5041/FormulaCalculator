@@ -1,5 +1,9 @@
 package org.chinaarchitect.calculator.formula;
-
+/**
+ * 
+ * @author Henry Hu
+ *
+ */
 public class Constant implements Calculable {
 	private final double value;
 

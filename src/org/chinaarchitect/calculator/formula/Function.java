@@ -1,5 +1,9 @@
 package org.chinaarchitect.calculator.formula;
-
+/**
+ * 
+ * @author Henry Hu
+ *
+ */
 public class Function implements Calculable {
 	protected Calculable[] expressions;
 

@@ -7,16 +7,31 @@ import org.chinaarchitect.calculator.formula.Constant;
 import org.chinaarchitect.calculator.pattern.Circulation;
 import org.chinaarchitect.calculator.pattern.Code;
 
+/**
+ * @author Henry Hu
+ *
+ */
 public class PointMatcher {
 	public Integer[] array;
 	Integer target;
 
+	/**
+	 * @param array
+	 *            array of numbers inputed
+	 * @param target
+	 *            the number want to achieve through calculation
+	 */
 	public PointMatcher(Integer[] array, Integer target) {
 		this.array = array;
 		this.target = target;
 
 	}
 
+	/**
+	 * 
+	 * @return the set of formulas from successive calculation which satisfies
+	 *         the target
+	 */
 	public HashSet<String> getSuccessive() {
 		HashSet<String> formulas = new HashSet<String>();
 		double faultTolerance = 0.000001;
@@ -46,6 +61,14 @@ public class PointMatcher {
 		return formulas;
 	}
 
+	/**
+	 * 
+	 * @param firstFormula
+	 * @param secondFormula
+	 * @param operationCase
+	 *            the ID of the operation you want to use through this method
+	 * @return a new formula combined with the two inputed formulae
+	 */
 	public Calculable operationSwitch(Calculable firstFormula, Calculable secondFormula, Integer operationCase) {
 		Calculable finalFormula = null;
 		switch (operationCase) {

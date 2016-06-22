@@ -20,6 +20,11 @@ import org.chinaarchitect.calculator.pattern.Pattern;
  * developed by @author lzx3778
  * 20:03  30.25.2016
  * @version 1.0*/
+/**
+ * 
+ * @author lzx3778
+ *
+ */
 public class GUI extends JFrame {
 	/**
 	 * 
