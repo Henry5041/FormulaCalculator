@@ -1,4 +1,5 @@
 package org.chinaarchitect.calculator.pattern;
+
 /**
  * 
  * @author Henry Hu

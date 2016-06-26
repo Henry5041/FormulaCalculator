@@ -19,7 +19,8 @@ import org.chinaarchitect.calculator.pattern.Pattern;
 /* a GUI for henry hu's 24 point program
  * developed by @author lzx3778
  * 20:03  30.25.2016
- * @version 1.0*/
+ * @version 1.0
+ */
 /**
  * 
  * @author lzx3778
