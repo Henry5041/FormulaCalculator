@@ -17,7 +17,7 @@ public class Main {
 		}
 		in.close();
 		HashSet<String> formulas = new HashSet<String>();
-		for (Integer[] pattern : new Pattern<Integer>(firstPattern).Iterate()) {
+		for (Integer[] pattern : new Pattern<Integer>(firstPattern).iterate()) {
 			// System.out.println(getFormula(pattern));
 			PointMatcher matcher = new PointMatcher(pattern, 24);
 

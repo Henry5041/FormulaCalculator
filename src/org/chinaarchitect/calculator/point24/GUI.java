@@ -133,7 +133,7 @@ public class GUI extends JFrame {
 						num[i] = Integer.parseInt(list[i]);
 					}
 
-					for (Integer[] pattern : new Pattern<Integer>(num).Iterate()) {
+					for (Integer[] pattern : new Pattern<Integer>(num).iterate()) {
 
 						PointMatcher matcher = new PointMatcher(pattern, 24);
 

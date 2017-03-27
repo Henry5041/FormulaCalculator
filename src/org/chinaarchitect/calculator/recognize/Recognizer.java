@@ -19,7 +19,7 @@ public class Recognizer {
 	public Recognizer(String expression) throws ImproperExpressionException {
 		// TODO Auto-generated constructor stub
 		expression.replace(" ", "");
-		if (!check(expression))
+		if (!check(expression)) // Check the validity of the expression inputed
 			throw new ImproperExpressionException("Inputed expression is incorrect");
 		this.setExpression(expression);
 
