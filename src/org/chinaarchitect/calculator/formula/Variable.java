@@ -1,5 +1,10 @@
 package org.chinaarchitect.calculator.formula;
 
+/**
+ * 
+ * @author Henry Hu
+ *
+ */
 public class Variable implements Calculable {
 	private double value;
 	private String name;

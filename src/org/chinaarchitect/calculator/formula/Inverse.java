@@ -1,5 +1,10 @@
 package org.chinaarchitect.calculator.formula;
 
+/**
+ * 
+ * @author Henry Hu
+ *
+ */
 public class Inverse extends Function {
 
 	public Inverse(Calculable exp) {

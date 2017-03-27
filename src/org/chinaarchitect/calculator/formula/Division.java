@@ -1,7 +1,11 @@
 package org.chinaarchitect.calculator.formula;
 
 public class Division extends Function {
-
+	/**
+	 * 
+	 * @author Henry Hu
+	 *
+	 */
 	public Division(Calculable[] expressions) {
 		super(expressions);
 		// TODO Auto-generated constructor stub

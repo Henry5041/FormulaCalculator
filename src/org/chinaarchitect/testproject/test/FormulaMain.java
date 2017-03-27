@@ -1,8 +1,13 @@
-package org.chinaarchitect.calculator.formula;
+package org.chinaarchitect.testproject.test;
 
 import java.util.Scanner;
 
-public class Main {
+import org.chinaarchitect.calculator.formula.Addition;
+import org.chinaarchitect.calculator.formula.Calculable;
+import org.chinaarchitect.calculator.formula.Constant;
+import org.chinaarchitect.calculator.formula.Function;
+
+public class FormulaMain {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

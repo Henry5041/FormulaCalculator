@@ -1,5 +1,10 @@
 package org.chinaarchitect.calculator.formula;
 
+/**
+ * 
+ * @author Henry Hu
+ *
+ */
 public class Multiplication extends Function {
 
 	public Multiplication(Calculable[] expressions) {

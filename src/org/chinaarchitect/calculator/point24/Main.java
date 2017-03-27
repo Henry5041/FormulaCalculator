@@ -53,7 +53,7 @@ public class Main {
 	public static HashSet<Integer[]> patternIterator(Integer[] num) {
 		// Iterate every possible patterns with the same 4 numbers
 		Pattern<Integer> pat = new Pattern<Integer>(num);
-		return pat.Iterate();
+		return pat.iterate();
 	}
 
 	public static String getFormula(Integer[] pattern) {
